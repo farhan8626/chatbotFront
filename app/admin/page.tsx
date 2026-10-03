@@ -29,7 +29,8 @@ export default function AdminDashboard() {
           return;
         }
 
-        const res = await fetch("http://127.0.0.1:8000/api/v1/admin/conversations", {
+        // const res = await fetch("http://127.0.0.1:8000/api/v1/admin/conversations", {
+        const res = await fetch("https://quantan-chatbot-api.onrender.com/api/v1/admin/conversations", {
           headers: {
             "Authorization": `Bearer ${token}`
           }

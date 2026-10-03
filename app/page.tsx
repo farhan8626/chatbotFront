@@ -45,7 +45,8 @@ export default function ChatPage() {
       // Call our FastAPI backend!
       const payload = sessionId ? { query: userMsg.content, session_id: sessionId } : { query: userMsg.content };
       
-      const response = await fetch("http://127.0.0.1:8000/api/v1/chat/", {
+      // const response = await fetch("http://127.0.0.1:8000/api/v1/chat/", {
+      const response = await fetch("https://quantan-chatbot-api.onrender.com/api/v1/chat/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
